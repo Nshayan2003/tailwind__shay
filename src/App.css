@@ -1,38 +1,145 @@
-.App {
+/* .App{
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator{
   display: flex;
   flex-direction: column;
+  width:320px;
+  height: 400px;
+  margin-top: 200px;
+}
+.leftSide{
+  flex: 75%;
+  height: 100%;
+  background-color: burlywood;
+}
+
+.display{
+  width: 318px;
+  height: 78px;
+  border:1px solid black;
+  background-color: cornsilk;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.rightSide{
+  flex: 25%;
+  height:100%;
+  background-color: chartreuse;
+}
+.numbers{
+  width: 240px;
+  height: 240px;
+  background-color: chartreuse;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+#clearBtn{
+  background-color: palevioletred;
+  width: 238px;
+  height: 78px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: burlywood;
+  
+}
+#operations{ background-color: skyblue;
+  width: 78px;
+  height: 78px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+color: magenta;
+text-shadow: orchid;
+cursor: pointer;
+}
+#individualNumber{
+  background-color: orange;
+  width: 78px;
+  height: 78px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aquamarine;
+  cursor: pointer;
+  
+}
+#individualNumber:hover{
+  color: red;
+  text-shadow: blue;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  height: 320px;
+} */
+/* 
+.products{
+  margin: 20px;
+  padding: 0;
+  list-style-type: none;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.products__single{
+  height: 150px;
+  padding: 20px;
+  background-color: rgb(220,220,220);
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.products__single > img{
+  width: 100%;height: 95%;object-fit: cover;
+  margin-bottom: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pagination{
+  padding: 10px;
+  max-width: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+.pagination > span{
+  padding: 15px 20px ;
+  border: 1px solid blueviolet;
+  cursor: pointer;
+}
+.pagination__selected{
+  background-color: aquamarine;
+}
+.pagination__disable{
+  opacity: 0;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .section-min-height{
+    min-height: calc(100vh - 68px);
   }
-  to {
-    transform: rotate(360deg);
+  .toggle-btn{
+    @apply [&>div::before]:translate-y-0 
+    [&>div::before]:rotate-45 
+    [&>div::after]:translate-y-0 
+    [&>div::after]:-rotate-45 
+    [&>div]:bg-transparent 
+    [&>div]:rotate-[720deg]
+    
   }
 }
